@@ -33,7 +33,7 @@ if ingredients_list:
         session.sql(my_insert_stmt).collect()
         st.success('Your Smoothie is ordered!', icon="✅")
 
-# chiamata api, devo ancora capire bene per cosa. Quando si importa nuova libreria bisogna aggiornare requirements.txt e fare reboot
+# Quando si importa nuova libreria bisogna aggiornare requirements.txt e fare reboot
 import requests
 smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
 st.text(smoothiefroot_response.json())
